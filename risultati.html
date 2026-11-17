@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>La Città Generativa — I risultati dell’incontro del 1° ottobre</title>
+<meta name="description" content="Milano Digital Week 2026 · La Città Generativa. Per un'IA al servizio della comunità. Partecipa alle sei discussioni su Deliberate.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --red:#ff0a4e;
+    --blue:#1665ff;
+    --yellow:#ffe500;
+    --ink:#0b0b0b;
+    --navy:#04112e;
+    --paper:#f4f1ea;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:"Barlow Condensed",system-ui,sans-serif;color:var(--ink);background:var(--paper);font-size:20px;line-height:1.35}
+  a{color:inherit}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+
+  /* top bar */
+  .top{display:flex;justify-content:flex-end;align-items:center;padding:18px 0}
+  .year{color:var(--red);font-weight:700;font-size:22px}
+
+  /* hero */
+  .hero{position:relative;color:var(--ink);padding:40px 0 8px}
+  .place{margin-top:22px;color:var(--blue);font-weight:600;font-size:24px;line-height:1.25;position:relative;z-index:1}
+  .meta{display:flex;gap:16px;align-items:center;flex-wrap:wrap;margin-bottom:40px;position:relative;z-index:1}
+  .pill{background:#fff;color:var(--ink);border:3px solid var(--ink);border-radius:999px;padding:3px 18px;font-weight:600;font-size:22px}
+  .time{font-weight:600;font-size:24px}
+  h1{font-family:"Anton",Impact,sans-serif;font-weight:400;text-transform:uppercase;font-size:clamp(56px,11vw,120px);line-height:1.08;letter-spacing:-.01em;position:relative;z-index:1}
+  .sub{font-size:clamp(22px,3vw,30px);font-weight:500;margin-top:10px;position:relative;z-index:1}
+
+  /* section titles */
+  .sec{display:flex;align-items:center;gap:16px;margin:56px 0 22px}
+  .sec::before{content:"";width:64px;height:4px;background:var(--red);flex:none}
+  .sec h2{font-family:"Anton",Impact,sans-serif;font-weight:400;color:var(--red);text-transform:uppercase;font-size:clamp(34px,5vw,54px);line-height:1}
+
+  .question{color:var(--ink);font-weight:600;font-size:clamp(24px,3.2vw,34px);line-height:1.15}
+  .intro{margin-top:18px;max-width:820px}
+
+  /* topic cards */
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px}
+  .card{display:flex;flex-direction:column;border:3px solid var(--ink);border-radius:12px;overflow:hidden;background:#fff;transition:transform .15s ease, box-shadow .15s ease}
+  .card:hover{transform:translate(-3px,-3px);box-shadow:6px 6px 0 var(--ink)}
+  .card .num{align-self:flex-start;background:var(--yellow);border-right:3px solid var(--ink);border-bottom:3px solid var(--ink);border-bottom-right-radius:10px;font-weight:700;font-size:22px;padding:2px 14px}
+  .card .body{padding:14px 20px 18px;flex:1}
+  .card h3{font-weight:700;font-size:24px;line-height:1.1;text-transform:uppercase;color:var(--blue)}
+  .card p{margin-top:10px;font-size:19px;line-height:1.3}
+.card .go{display:block;text-decoration:none;color:var(--ink);background:var(--yellow);border-top:3px solid var(--ink);font-weight:700;text-transform:uppercase;text-align:center;padding:9px 12px;font-size:20px}
+  .card .go:hover,.card .go:focus-visible{background:var(--red);color:#fff;outline:none}
+
+  /* emerso */
+  .lead{font-size:clamp(24px,3vw,32px);font-weight:600;line-height:1.2;max-width:900px}
+  .lead em{font-style:normal;color:var(--blue)}
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:26px 0}
+  .stat{background:#fff;border:3px solid var(--ink);border-radius:12px;padding:12px 16px}
+  .stat .n{font-family:"Anton",Impact,sans-serif;font-size:46px;line-height:1;color:var(--red)}
+  .stat .l{font-size:18px;font-weight:600;line-height:1.15;margin-top:6px}
+  .points{list-style:none;display:grid;gap:10px;max-width:900px}
+  .points li{padding-left:30px;position:relative}
+  .points li::before{content:"";position:absolute;left:0;top:.5em;width:16px;height:4px;background:var(--red)}
+  .caveat{margin-top:18px;font-size:18px;color:#555;max-width:900px}
+  details.dis{margin-top:22px;background:#fff;border:3px solid var(--ink);border-radius:12px;overflow:hidden}
+  details.dis summary{cursor:pointer;font-weight:700;text-transform:uppercase;font-size:21px;padding:10px 18px;list-style:none}
+  details.dis summary::-webkit-details-marker{display:none}
+  details.dis summary::after{content:" +";color:var(--red)}
+  details.dis[open] summary::after{content:" −"}
+  .tbl{width:100%;border-collapse:collapse;font-size:18px}
+  .tbl th,.tbl td{border-top:2px solid var(--ink);padding:8px 14px;text-align:left;vertical-align:top}
+  .tbl th{background:var(--yellow);font-weight:700}
+  .tbl td:first-child{font-weight:600}
+  @media (max-width:640px){.tbl thead{display:none}.tbl tr{display:block;border-top:2px solid var(--ink);padding:6px 0}.tbl td{display:block;border:0;padding:3px 14px}.tbl td:nth-child(2)::before{content:"Da una parte: ";font-weight:600}.tbl td:nth-child(3)::before{content:"Dall’altra: ";font-weight:600}}
+
+  /* perché nelle card */
+  .card details{border-top:2px dashed var(--ink);margin:0 20px;padding:8px 0 12px}
+  .card summary{cursor:pointer;color:var(--blue);font-weight:700;font-size:18px;text-transform:uppercase;list-style:none}
+  .card summary::-webkit-details-marker{display:none}
+  .card summary::after{content:" +"}
+  .card details[open] summary::after{content:" −"}
+  .card details p{font-size:17px;margin-top:6px}
+
+  /* steps */
+  .note{background:var(--yellow);border:3px solid var(--ink);border-radius:10px;padding:10px 18px;margin-bottom:20px;font-size:21px}
+  .place a{color:var(--blue);text-decoration:underline;text-underline-offset:3px}
+  .intro a{color:var(--blue);font-weight:600}
+  .all{text-align:center;margin-top:28px}
+  .all a{display:inline-block;background:var(--blue);color:#fff;text-decoration:none;font-weight:700;text-transform:uppercase;font-size:22px;border:3px solid var(--ink);border-radius:999px;padding:10px 28px;transition:transform .15s,box-shadow .15s}
+  .all{display:flex;flex-wrap:wrap;justify-content:center;gap:16px}
+  .all.left{justify-content:flex-start;margin-top:22px}
+  .all a.report{background:var(--yellow);color:var(--ink)}
+  .all a:hover{transform:translate(-3px,-3px);box-shadow:5px 5px 0 var(--ink)}
+  .steps{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:18px;counter-reset:s}
+  .step{border:2px solid var(--ink);border-radius:10px;padding:14px 18px;background:#fff}
+  .step b{display:inline-block;background:var(--blue);color:#fff;border-radius:6px;padding:1px 10px;margin-bottom:8px;font-weight:600}
+  .step small{display:block;margin-top:6px;font-size:17px;color:#444}
+
+  footer{margin:64px 0 40px}
+  .orgs{display:flex;flex-wrap:wrap;align-items:center;gap:18px 48px}
+  footer .lab.second{margin-top:36px}
+  .orgs img{height:48px;width:auto;display:block}
+  @media (max-width:560px){.orgs img{height:36px}}
+  footer .lab{color:var(--blue);font-weight:600;font-size:22px;margin-bottom:6px}
+  @media (max-width:560px){.hero{padding:28px 0 8px}.place{font-size:19px}}
+
+  .back{color:var(--blue);font-weight:600;text-decoration:none;font-size:20px}
+  .back:hover{text-decoration:underline}
+  .txt{max-width:860px}
+  .txt p+p{margin-top:10px}
+  ol.flow{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:18px;counter-reset:f}
+  ol.flow li{background:#fff;border:3px solid var(--ink);border-radius:12px;padding:14px 18px;counter-increment:f}
+  ol.flow li::before{content:counter(f);display:inline-block;background:var(--blue);color:#fff;border-radius:6px;padding:0 10px;font-weight:700;margin-bottom:8px}
+  ol.flow b{display:block;text-transform:uppercase}
+  .themes{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:18px}
+  .theme{background:#fff;border:3px solid var(--ink);border-radius:12px;padding:16px 20px}
+  .theme h3{color:var(--blue);text-transform:uppercase;font-size:23px;line-height:1.1;margin-bottom:10px}
+  .theme ul{list-style:none;display:grid;gap:7px;font-size:18px}
+  .theme li{padding-left:22px;position:relative}
+  .theme li::before{content:"";position:absolute;left:0;top:.55em;width:12px;height:3px;background:var(--red)}
+  .theme .tag{display:inline-block;background:var(--yellow);font-weight:700;font-size:14px;text-transform:uppercase;padding:0 6px;border-radius:4px;margin-right:4px}
+  .tone{margin:18px 0;max-width:860px}
+  .wrapt{background:#fff;border:3px solid var(--ink);border-radius:12px;overflow:hidden}
+  .wrapt .tbl tr:first-child th{border-top:0}
+  .prop{background:#fff;border:3px solid var(--ink);border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
+  .prop .body{padding:14px 20px 16px;flex:1}
+  .prop h3{color:var(--blue);text-transform:uppercase;font-size:23px;line-height:1.1}
+  .prop h4{text-transform:uppercase;font-size:16px;margin-top:12px;color:var(--red)}
+  .prop p{font-size:18px;margin-top:4px}
+  .prop .go{display:block;text-decoration:none;color:var(--ink);background:var(--yellow);border-top:3px solid var(--ink);font-weight:700;text-transform:uppercase;text-align:center;padding:9px 12px;font-size:20px}
+  .prop .go:hover{background:var(--red);color:#fff}
+  .prop .num{align-self:flex-start;background:var(--yellow);border-right:3px solid var(--ink);border-bottom:3px solid var(--ink);border-bottom-right-radius:10px;font-weight:700;font-size:22px;padding:2px 14px}
+  .note2{font-size:16px;color:#555;margin-top:8px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="top" style="justify-content:space-between">
+    <a class="back" href="index.html">← Torna alle proposte</a>
+    <div class="year">2026</div>
+  </div>
+
+  <header class="hero">
+    <div class="meta"><span class="pill">RESTITUZIONE · 1 OTTOBRE 2026</span></div>
+    <h1>La città<br>generativa</h1>
+    <p class="sub">Per un’IA al servizio della comunità</p>
+    <div class="place">Cosa è emerso dall’incontro al Politecnico di Milano</div>
+  </header>
+
+  <div style="height:40px"></div>
+  <p class="lead">Le persone partecipanti non hanno chiesto “più intelligenza artificiale”. Hanno chiesto che a Milano l’IA sia governata <em>come un servizio pubblico</em>: utile, comprensibile, controllabile, accompagnata da persone e luoghi fisici, e attenta ai suoi costi ambientali.</p>
+
+  <div class="stats">
+    <div class="stat"><div class="n">90</div><div class="l">persone registrate</div></div>
+    <div class="stat"><div class="n">63</div><div class="l">persone in sala</div></div>
+    <div class="stat"><div class="n">24</div><div class="l">persone hanno scritto su Deliberate</div></div>
+    <div class="stat"><div class="n">97</div><div class="l">commenti e risposte online</div></div>
+    <div class="stat"><div class="n">5</div><div class="l">tavoli con conversazione registrata</div></div>
+  </div>
+
+  <ul class="points">
+    <li>Il tema più discusso online è stato il <strong>divario digitale</strong>: 28 commenti su 77 analizzati.</li>
+    <li>La preoccupazione più ricorrente ai tavoli è l’<strong>esclusione</strong> di persone anziane, con disabilità o con meno competenze digitali, emersa in 3 tavoli.</li>
+    <li>La richiesta più condivisa è che la partecipazione abbia <strong>effetti concreti</strong> e che si sappia che fine fanno i contributi.</li>
+    <li>I <strong>data center</strong> hanno reso visibile il lato materiale dell’IA: energia, acqua, suolo e a cosa servono i dati conservati.</li>
+    <li>Le opinioni non erano tutte uguali: c’è chi vede nell’IA un’<strong>opportunità</strong> e chi non la vuole in nessun caso.</li>
+  </ul>
+
+  <div class="sec"><h2>Come si è svolto</h2></div>
+  <p class="txt">L’incontro si è tenuto il 1° ottobre 2026 al Politecnico di Milano, nell’ambito della Milano Digital Week, in tre passaggi.</p>
+  <ol class="flow">
+    <li><b>Panel</b>Otto relatrici e relatori hanno parlato di IA e città, con la moderazione di Antonio Alaia. Intanto il pubblico commentava dal telefono su Deliberate.</li>
+    <li><b>Analisi dei commenti</b>Deliberate ha raggruppato i commenti in temi con l’aiuto dell’IA.</li>
+    <li><b>Tavoli di discussione</b>I temi sono stati assegnati a tavoli facilitati, con canvas e post-it. Le conversazioni sono state registrate e trascritte con Democracy Route.</li>
+  </ol>
+
+  <div class="sec"><h2>Online</h2></div>
+  <p class="tone"><strong>Il tono è stato cauto più che entusiasta:</strong> 24 commenti positivi, 25 neutri, 14 negativi e 14 non classificati, nessuno offensivo. I ragionamenti più usati sono stati quelli pratici (50 commenti) ed etici (45).</p>
+  <div class="themes">
+    <div class="theme"><h3>Abbassare le barriere</h3><ul><li>La tecnologia deve abilitare, non diventare un ostacolo all’accesso.</li><li>Proposte soluzioni ibride tra digitale e analogico.</li></ul></div>
+    <div class="theme"><h3>Formazione per tutte le età</h3><ul><li>11 messaggi parlano di alfabetizzazione e competenze digitali, dall’infanzia alla terza età.</li><li>Bisogna imparare anche quando <em>non</em> usare l’IA.</li></ul></div>
+    <div class="theme"><h3>Piattaforme pubbliche e aperte</h3><ul><li>Non costruite “come i social”.</li><li>Sapere chi detiene i dati e chi scrive l’algoritmo; software open source e scopi civici.</li></ul></div>
+    <div class="theme"><h3>Data center</h3><ul><li>Trasparenza prima di costruirne altri: consumi, acqua, finalità, peso sul quartiere.</li><li>Il tema compare in 8 messaggi.</li></ul></div>
+    <div class="theme"><h3>Spiegare e contestare</h3><ul><li>Capire come l’IA riassume e analizza i contributi.</li><li>Poter contestare le decisioni che supporta.</li></ul></div>
+    <div class="theme"><h3>Il gemello digitale</h3><ul><li>8 messaggi su una copia digitale della città per simulare le scelte, con l’esempio di Bologna.</li><li>Deve restare sotto controllo pubblico.</li></ul></div>
+  </div>
+  <p class="note2">Rischi più citati secondo l’analisi automatica: democrazia, disuguaglianze digitali, etica e trasparenza dell’IA, governance dei data center.</p>
+
+  <div class="sec"><h2>Ai tavoli</h2></div>
+  <div class="themes">
+    <div class="theme"><h3>Democrazia partecipativa</h3><ul>
+      <li>Una piattaforma non basta: servono luoghi di dialogo, più voci diverse e un impatto reale delle proposte.</li>
+      <li>Ostacoli: scarso ascolto delle istituzioni, burocrazia, strumenti poco accessibili.</li>
+      <li><span class="tag">Accordo</span>Chi partecipa deve poter porre un problema in modo semplice e capire se qualcuno ci sta già lavorando.</li>
+      <li><span class="tag">Proposta</span>Una piattaforma per informarsi, proporre temi e organizzare incontri, accessibile anche a chi usa poco il digitale.</li></ul></div>
+    <div class="theme"><h3>Democrazia e pubblica amministrazione</h3><ul>
+      <li>La tecnologia non è neutrale: senza istituzioni attive può allargare i divari.</li>
+      <li>L’IA non deve diventare un fine in sé né sostituire responsabilità pubblica e relazioni umane.</li>
+      <li>Rischio che alcune parti della popolazione siano sovrarappresentate e altre dimenticate.</li>
+      <li>Un’esperienza riuscita in un quartiere (è stato citato Dergano) non si può copiare così com’è altrove.</li></ul></div>
+    <div class="theme"><h3>Data center, clima e democrazia</h3><ul>
+      <li>Usano elettricità, acqua, suolo e reti; costi e benefici possono distribuirsi in modo diseguale tra quartieri.</li>
+      <li>Servono informazioni pubbliche su consumi, impatti locali, espansioni e finalità dei dati.</li>
+      <li><span class="tag">Proposta</span>Una pianificazione, anche europea, su dove servono, quanti e per cosa.</li></ul></div>
+    <div class="theme"><h3>Mobilità sostenibile</h3><ul>
+      <li>L’IA può aiutare a monitorare i flussi, prevedere incidenti e congestione e rendere le tariffe più eque.</li>
+      <li>Percorsi accessibili e dati sull’inquinamento per decidere gli investimenti.</li>
+      <li>La guida autonoma richiede pianificazione pubblica; online ci si è chiesti chi sia responsabile in caso di incidente.</li></ul></div>
+    <div class="theme"><h3>Superare il divario digitale</h3><ul>
+      <li>Non è solo connessione: è un intreccio di competenze, fiducia, accessibilità e cultura.</li>
+      <li>Servono “connettori” che spieghino gli strumenti, perché la conoscenza si moltiplichi tra pari.</li>
+      <li>Esempio citato: i siti del Comune di Monaco di Baviera, in formati accessibili.</li>
+      <li><span class="tag">Proposta</span>Una pagina del Comune sull’IA, con webinar gratuiti e video brevi.</li></ul></div>
+  </div>
+
+  <div class="sec"><h2>Dove non eravamo d’accordo</h2></div>
+  <div class="wrapt">
+    <table class="tbl">
+      <thead><tr><th>Questione</th><th>Una posizione</th><th>L’altra posizione</th></tr></thead>
+      <tbody>
+        <tr><td>Chi deve costruire gli strumenti di partecipazione</td><td>Il Comune deve attivarli, altrimenti non nascono</td><td>Funzionano solo se nascono dal basso, dai bisogni di chi vive la città</td></tr>
+        <tr><td>Chi ha più legittimità</td><td>Chi partecipa direttamente</td><td>Chi è stato eletto</td></tr>
+        <tr><td>L’IA può riassumere cosa dicono le persone?</td><td>Può aiutare a capire motivazioni e bisogni</td><td>Solo una persona sa distinguere cosa conta davvero</td></tr>
+        <tr><td>Data center</td><td>Servono per non dipendere da Stati Uniti e Cina</td><td>Vanno rallentati e regolati meglio</td></tr>
+        <tr><td>Impatto ambientale dell’IA</td><td>Oggi è sovrastimato, il problema è la crescita futura</td><td>È già un costo economico e ambientale troppo alto per un Comune</td></tr>
+        <tr><td>Come si impara il digitale</td><td>Stimola di più un bisogno concreto, per esempio trovare lavoro</td><td>Le istituzioni devono avere un ruolo attivo</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="note2">Posizioni di minoranza: una persona ha detto che l’IA non dovrebbe essere usata in nessun caso; un’altra preferisce il contatto diretto con chi amministra, come gli orari di ricevimento, a qualsiasi piattaforma.</p>
+
+  <div class="sec"><h2>Le sei proposte</h2></div>
+  <p class="txt">Le proposte mettono insieme ciò che è emerso da più fonti. Sono una base da discutere, non decisioni già prese: <strong>dicci cosa ne pensi su Deliberate</strong>.</p>
+  <div style="height:18px"></div>
+  <div class="grid" id="props"></div>
+
+  <div class="sec"><h2>Da tenere a mente</h2></div>
+  <ul class="points">
+    <li><strong>Non è un campione rappresentativo:</strong> i risultati raccontano cosa hanno detto le persone presenti quella sera, non cosa pensa tutta Milano.</li>
+    <li><strong>Parte dell’analisi è automatica:</strong> temi e sentiment sono stati calcolati dall’IA di Deliberate; le sintesi dei tavoli sono generate dall’IA e riviste da una persona dell’organizzazione.</li>
+    <li><strong>“Citato in N tavoli” non misura il consenso:</strong> dice solo in quanti tavoli è emerso un tema.</li>
+    <li><strong>Le registrazioni coprono 5 tavoli</strong> e alcune trascrizioni sono frammentarie: i canvas cartacei completano il quadro.</li>
+  </ul>
+
+  <div class="sec"><h2>Prossimi passi</h2></div>
+  <p class="txt">Raccogliere commenti e correzioni su Deliberate, poi presentare le proposte al Comune di Milano chiedendo una risposta pubblica su ciascuna.</p>
+
+  <div class="all" style="margin-top:32px">
+    <a href="index.html">← Torna alle proposte</a>
+    <a class="report" href="report.pdf" download>Scarica il report completo (PDF) ↓</a>
+  </div>
+
+  <footer>
+    <div class="lab">Organizzato da</div>
+    <div class="orgs">
+      <img src="logo-eumans.png" alt="Eumans">
+      <img src="logo-neuroclima.png" alt="Neuroclima">
+      <img src="logo-polimi.png" alt="Politecnico di Milano – Dipartimento di Design">
+    </div>
+    <div class="lab second">Con la collaborazione di</div>
+    <div class="orgs">
+      <img src="logo-humanhall.png" alt="Human Hall">
+      <img src="logo-unimi.png" alt="Università degli Studi di Milano">
+    </div>
+  </footer>
+</div>
+
+<script src="topics.js"></script>
+<script>
+  const COSA = ['Ogni servizio o percorso partecipativo digitale del Comune sia affiancato da sportelli, facilitatori e la possibilità di partecipare di persona. Testi in linguaggio semplice e formati accessibili, come fa Monaco di Baviera. Piattaforme progettate insieme a chi vive la città, partendo da chi oggi resta fuori.',
+    'Per ogni percorso partecipativo il Comune renda pubblici la domanda posta, i contributi ricevuti, come sono stati sintetizzati, cosa è stato deciso e perché. Anche quando una proposta non viene accolta.',
+    'Quando il Comune usa un sistema automatico deve dirlo chiaramente, spiegare cosa fa, indicare chi resta responsabile e offrire un modo semplice per chiedere spiegazioni o una revisione umana. Strumenti di partecipazione preferibilmente open source, con dati e regole pubbliche, e una commissione di persone esperte e cittadine e cittadini per le linee guida.',
+    'Percorsi gratuiti e continuativi per tutte le età, con scuole, biblioteche, associazioni e presìdi di quartiere. Una pagina del Comune con video brevi e webinar su come funziona l’IA, le regole e quando non usarla. Facilitatori e facilitatrici come ponte tra persone e strumenti.',
+    'Un registro pubblico dei data center presenti e previsti, con consumi di energia e acqua, uso del suolo, finalità dei dati, impatti e benefici per i quartieri. Valutazioni di impatto locale e confronto con chi abita la zona prima di autorizzare nuove strutture.',
+    'Usare dati e IA per adattare i trasporti, ridurre incidenti e inquinamento e rendere le tariffe più eque, con percorsi accessibili. Un eventuale gemello digitale sia pubblico e aperto. Prima e durante ogni progetto, valutare chi ne beneficia, chi ne paga i costi e chi rischia di restare indietro.'];
+  const box = document.getElementById("props");
+  TOPICS.forEach((t, i) => {
+    const c = document.createElement("div");
+    c.className = "prop";
+    c.innerHTML = `<span class="num">${String.fromCharCode(65 + i)}</span>
+      <div class="body"><h3></h3><h4>Cosa chiediamo</h4><p class="c"></p><h4>Perché</h4><p class="w"></p></div>
+      <a class="go" target="_blank" rel="noopener">Discutila su Deliberate →</a>`;
+    c.querySelector("h3").textContent = t.title;
+    c.querySelector(".c").textContent = COSA[i];
+    c.querySelector(".w").textContent = t.why;
+    c.querySelector(".go").href = t.url;
+    box.appendChild(c);
+  });
+</script>
+</body>
+</html>
