@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>La Città Generativa — Le discussioni su Deliberate</title>
+<meta name="description" content="Milano Digital Week 2026 · La Città Generativa. Per un'IA al servizio della comunità. Partecipa alle sei discussioni su Deliberate.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --red:#ff0a4e;
+    --blue:#1665ff;
+    --yellow:#ffe500;
+    --ink:#0b0b0b;
+    --navy:#04112e;
+    --paper:#f4f1ea;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:"Barlow Condensed",system-ui,sans-serif;color:var(--ink);background:var(--paper);font-size:20px;line-height:1.35}
+  a{color:inherit}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+
+  /* top bar */
+  .top{display:flex;justify-content:flex-end;align-items:center;padding:18px 0}
+  .year{color:var(--red);font-weight:700;font-size:22px}
+
+  /* hero */
+  .hero{position:relative;color:var(--ink);padding:40px 0 8px}
+  .place{margin-top:22px;color:var(--blue);font-weight:600;font-size:24px;line-height:1.25;position:relative;z-index:1}
+  .meta{display:flex;gap:16px;align-items:center;flex-wrap:wrap;margin-bottom:40px;position:relative;z-index:1}
+  .pill{background:#fff;color:var(--ink);border:3px solid var(--ink);border-radius:999px;padding:3px 18px;font-weight:600;font-size:22px}
+  .time{font-weight:600;font-size:24px}
+  h1{font-family:"Anton",Impact,sans-serif;font-weight:400;text-transform:uppercase;font-size:clamp(56px,11vw,120px);line-height:1.08;letter-spacing:-.01em;position:relative;z-index:1}
+  .sub{font-size:clamp(22px,3vw,30px);font-weight:500;margin-top:10px;position:relative;z-index:1}
+
+  /* section titles */
+  .sec{display:flex;align-items:center;gap:16px;margin:56px 0 22px}
+  .sec::before{content:"";width:64px;height:4px;background:var(--red);flex:none}
+  .sec h2{font-family:"Anton",Impact,sans-serif;font-weight:400;color:var(--red);text-transform:uppercase;font-size:clamp(34px,5vw,54px);line-height:1}
+
+  .question{color:var(--blue);font-weight:600;font-size:clamp(24px,3.2vw,34px);line-height:1.15}
+  .intro{margin-top:18px;max-width:820px}
+
+  /* topic cards */
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px}
+  .card{display:flex;flex-direction:column;text-decoration:none;border:3px solid var(--ink);border-radius:12px;overflow:hidden;background:#fff;transition:transform .15s ease, box-shadow .15s ease}
+  .card:hover,.card:focus-visible{transform:translate(-3px,-3px);box-shadow:6px 6px 0 var(--ink);outline:none}
+  .card .num{align-self:flex-start;background:var(--yellow);border-right:3px solid var(--ink);border-bottom:3px solid var(--ink);border-bottom-right-radius:10px;font-weight:700;font-size:22px;padding:2px 14px}
+  .card .body{padding:14px 20px 18px;flex:1}
+  .card h3{font-weight:700;font-size:24px;line-height:1.1;text-transform:uppercase;color:var(--blue)}
+  .card p{margin-top:10px;font-size:19px;line-height:1.3}
+  .card .go{background:var(--yellow);border-top:3px solid var(--ink);font-weight:700;text-transform:uppercase;text-align:center;padding:9px 12px;font-size:20px}
+  .card:hover .go{background:var(--red);color:#fff}
+
+  /* steps */
+  .note{background:var(--yellow);border:3px solid var(--ink);border-radius:10px;padding:10px 18px;margin-bottom:20px;font-size:21px}
+  .place a{color:var(--blue);text-decoration:underline;text-underline-offset:3px}
+  .intro a{color:var(--blue);font-weight:600}
+  .all{text-align:center;margin-top:28px}
+  .all a{display:inline-block;background:var(--blue);color:#fff;text-decoration:none;font-weight:700;text-transform:uppercase;font-size:22px;border:3px solid var(--ink);border-radius:999px;padding:10px 28px;transition:transform .15s,box-shadow .15s}
+  .all a:hover{transform:translate(-3px,-3px);box-shadow:5px 5px 0 var(--ink)}
+  .steps{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:18px;counter-reset:s}
+  .step{border:2px solid var(--ink);border-radius:10px;padding:14px 18px;background:#fff}
+  .step b{display:inline-block;background:var(--blue);color:#fff;border-radius:6px;padding:1px 10px;margin-bottom:8px;font-weight:600}
+  .step small{display:block;margin-top:6px;font-size:17px;color:#444}
+
+  footer{margin:64px 0 40px;display:flex;flex-wrap:wrap;gap:28px 60px;align-items:flex-end}
+  footer .lab{color:var(--blue);font-weight:600;font-size:22px;margin-bottom:6px}
+  .eumans{font-family:"Anton",Impact,sans-serif;font-size:44px;letter-spacing:-.01em;line-height:1}
+  .partners{font-size:19px;font-weight:500}
+  @media (max-width:560px){.hero{padding:28px 0 8px}.place{font-size:19px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="top">
+    <div class="year">2026</div>
+  </div>
+
+  <header class="hero">
+    <div class="meta">
+      <span class="pill">LE DISCUSSIONI CONTINUANO ONLINE</span>
+    </div>
+    <h1>La città<br>generativa</h1>
+    <p class="sub">Per un’IA al servizio della comunità</p>
+    <div class="place">Sei proposte per Milano su Deliberate<br>Comincia da quella che preferisci, poi torna qui<br>per aprirne un’altra.</div>
+  </header>
+
+  <div class="sec"><h2>Di cosa parliamo</h2></div>
+  <div class="question">Come può l’intelligenza artificiale contribuire a migliorare la vita democratica delle nostre città?</div>
+  <p class="intro">Dai contributi raccolti durante l’incontro sono nate <strong>sei proposte per Milano</strong>, ora aperte alla discussione su <strong>Deliberate</strong>. Sono una base di discussione, non decisioni già prese: comincia dalla proposta che preferisci e lascia il tuo contributo con commenti, posizioni, domande e proposte.<br><strong>Se hai già creato un account durante l’evento del 1° ottobre, non serve registrarsi di nuovo.</strong></p>
+
+  <div class="sec"><h2>Le sei proposte</h2></div>
+
+  <!-- ✏️ MODIFICA QUI: titolo, descrizione e link di ciascuna discussione -->
+  <div class="grid" id="topics"></div>
+  <div class="all"><a href="https://deliberate.gr/orgs/54" target="_blank" rel="noopener">Vedi tutte le proposte su Deliberate →</a></div>
+
+  <div class="sec"><h2>Come partecipare</h2></div>
+  <p class="note">Hai già creato un account durante l’evento del 1° ottobre? <strong>Non serve registrarsi di nuovo</strong>: accedi con il tuo account e partecipa.</p>
+  <div class="steps">
+    <div class="step"><b>1</b><br>Clicca sulla proposta che preferisci qui sopra (la pagina resta aperta, puoi tornarci quando vuoi).</div>
+    <div class="step"><b>2</b><br>Su Deliberate clicca <strong>Registrati / Sign up</strong>.</div>
+    <div class="step"><b>3</b><br>Crea un account: collega <strong>Google</strong> (più veloce) o usa username e password.
+      <small>Da desktop: attendi l’email con il codice di attivazione (controlla lo spam, o clicca “resend code”).</small></div>
+    <div class="step"><b>4</b><br><strong>Apri e commenta</strong>: interagisci con la discussione in tempo reale.</div>
+  </div>
+
+  <footer>
+    <div>
+      <div class="lab">Organizzato da</div>
+      <div class="eumans">EUMANS!</div>
+    </div>
+    <div>
+      <div class="lab">Con il contributo di:</div>
+      <div class="partners">Neuroclima · Politecnico di Milano – Dipartimento di Design · Human Hall · Università degli Studi di Milano</div>
+    </div>
+  </footer>
+</div>
+
+<script>
+  // ✏️ Sostituisci i numeri dei topic (e i testi) con quelli veri di deliberate.gr
+  const TOPICS = [
+    { title: "Partecipazione accessibile",
+      text: "Ogni percorso di partecipazione digitale del Comune deve offrire anche modalità in presenza e supporto per chi incontra barriere digitali.",
+      url: "https://deliberate.gr/topics/XXX" },
+    { title: "Restituzione dei percorsi partecipativi",
+      text: "Il Comune deve rendere pubblici gli esiti di ogni percorso partecipativo, spiegando come sono stati considerati i contributi e perché alcune proposte non sono state accolte.",
+      url: "https://deliberate.gr/topics/XXX" },
+    { title: "IA trasparente e contestabile",
+      text: "Ogni uso dell’IA da parte del Comune deve essere dichiarato, spiegabile e contestabile, con la possibilità di chiedere una revisione umana.",
+      url: "https://deliberate.gr/topics/XXX" },
+    { title: "Alfabetizzazione digitale e sull’IA",
+      text: "Il Comune deve garantire un programma gratuito e continuativo di alfabetizzazione digitale e sull’IA, rivolto a tutte le età.",
+      url: "https://deliberate.gr/topics/XXX" },
+    { title: "Data center e impatti sul territorio",
+      text: "Milano deve rendere pubblici i dati e gli impatti dei data center e valutare gli effetti sul territorio prima di autorizzarne di nuovi.",
+      url: "https://deliberate.gr/topics/XXX" },
+    { title: "Mobilità smart e gemello digitale",
+      text: "Milano deve valutare chi beneficia e chi rischia di restare escluso dai progetti di mobilità smart e dal gemello digitale.",
+      url: "https://deliberate.gr/topics/XXX" },
+  ];
+
+  const grid = document.getElementById("topics");
+  TOPICS.forEach((t, i) => {
+    const a = document.createElement("a");
+    a.className = "card";
+    a.href = t.url;
+    a.target = "_blank";
+    a.rel = "noopener";
+    a.innerHTML = `<span class="num">${String.fromCharCode(65 + i)}</span>
+      <div class="body"><h3></h3><p></p></div>
+      <div class="go">Partecipa su Deliberate →</div>`;
+    a.querySelector("h3").textContent = t.title;
+    a.querySelector("p").textContent = t.text;
+    grid.appendChild(a);
+  });
+</script>
+</body>
+</html>
