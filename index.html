@@ -40,7 +40,7 @@
   .sec::before{content:"";width:64px;height:4px;background:var(--red);flex:none}
   .sec h2{font-family:"Anton",Impact,sans-serif;font-weight:400;color:var(--red);text-transform:uppercase;font-size:clamp(34px,5vw,54px);line-height:1}
 
-  .question{color:var(--blue);font-weight:600;font-size:clamp(24px,3.2vw,34px);line-height:1.15}
+  .question{color:var(--ink);font-weight:600;font-size:clamp(24px,3.2vw,34px);line-height:1.15}
   .intro{margin-top:18px;max-width:820px}
 
   /* topic cards */
@@ -69,10 +69,12 @@
   .step b{display:inline-block;background:var(--blue);color:#fff;border-radius:6px;padding:1px 10px;margin-bottom:8px;font-weight:600}
   .step small{display:block;margin-top:6px;font-size:17px;color:#444}
 
-  footer{margin:64px 0 40px;display:flex;flex-wrap:wrap;gap:28px 60px;align-items:flex-end}
+  footer{margin:64px 0 40px}
+  .orgs{display:flex;flex-wrap:wrap;align-items:center;gap:18px 48px}
+  footer .lab.second{margin-top:36px}
+  .orgs img{height:48px;width:auto;display:block}
+  @media (max-width:560px){.orgs img{height:36px}}
   footer .lab{color:var(--blue);font-weight:600;font-size:22px;margin-bottom:6px}
-  .eumans{font-family:"Anton",Impact,sans-serif;font-size:44px;letter-spacing:-.01em;line-height:1}
-  .partners{font-size:19px;font-weight:500}
   @media (max-width:560px){.hero{padding:28px 0 8px}.place{font-size:19px}}
 </style>
 </head>
@@ -92,7 +94,7 @@
     <div class="place">Sei proposte per Milano su Deliberate<br>Comincia da quella che preferisci, poi torna qui<br>per aprirne un’altra.</div>
   </header>
 
-  <div class="sec"><h2>Di cosa parliamo</h2></div>
+  <div style="height:48px"></div>
   <div class="question">Come può l’intelligenza artificiale contribuire a migliorare la vita democratica delle nostre città?</div>
   <p class="intro">Dai contributi raccolti durante l’incontro sono nate <strong>sei proposte per Milano</strong>, ora aperte alla discussione su <strong>Deliberate</strong>. Sono una base di discussione, non decisioni già prese: comincia dalla proposta che preferisci e lascia il tuo contributo con commenti, posizioni, domande e proposte.<br><strong>Se hai già creato un account durante l’evento del 1° ottobre, non serve registrarsi di nuovo.</strong></p>
 
@@ -115,13 +117,16 @@
   </div>
 
   <footer>
-    <div>
-      <div class="lab">Organizzato da</div>
-      <div class="eumans">EUMANS!</div>
+    <div class="lab">Organizzato da</div>
+    <div class="orgs">
+      <img src="logo-eumans.png" alt="Eumans">
+      <img src="logo-neuroclima.png" alt="Neuroclima">
+      <img src="logo-polimi.png" alt="Politecnico di Milano – Dipartimento di Design">
     </div>
-    <div>
-      <div class="lab">Con il contributo di:</div>
-      <div class="partners">Neuroclima · Politecnico di Milano – Dipartimento di Design · Human Hall · Università degli Studi di Milano</div>
+    <div class="lab second">Con la collaborazione di</div>
+    <div class="orgs">
+      <img src="logo-humanhall.png" alt="Human Hall">
+      <img src="logo-unimi.png" alt="Università degli Studi di Milano">
     </div>
   </footer>
 </div>
