@@ -39,7 +39,7 @@
   .sec{display:flex;align-items:center;gap:16px;margin:56px 0 22px}
   .sec h2{font-family:"Anton",Impact,sans-serif;font-weight:400;color:var(--red);text-transform:uppercase;font-size:clamp(34px,5vw,54px);line-height:1}
 
-  .question{color:var(--ink);font-weight:600;font-size:clamp(24px,3.2vw,34px);line-height:1.15}
+  .question{color:var(--ink);font-weight:600;font-size:clamp(30px,4.4vw,48px);line-height:1.15}
   .intro{margin-top:18px;max-width:900px}
 
   /* topic cards */
@@ -54,12 +54,12 @@
   .card .go:hover,.card .go:focus-visible{background:var(--red);color:#fff;outline:none}
 
   /* emerso */
-  .lead{font-size:clamp(24px,3vw,32px);font-weight:600;line-height:1.2;max-width:900px}
+  .lead{font-size:clamp(24px,3vw,32px);font-weight:400;line-height:1.2;max-width:900px}
   .lead em{font-style:normal;color:var(--blue)}
   .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:26px 0}
   .stat{background:#fff;border:2px solid var(--ink);border-radius:12px;padding:12px 16px}
   .stat .n{font-family:"Anton",Impact,sans-serif;font-size:46px;line-height:1;color:var(--red)}
-  .stat .l{font-size:20px;font-weight:600;line-height:1.15;margin-top:6px}
+  .stat .l{font-size:20px;font-weight:400;line-height:1.15;margin-top:6px}
   .points{list-style:none;display:grid;gap:10px;max-width:900px}
   .points li{padding-left:30px;position:relative}
   .points li::before{content:"";position:absolute;left:0;top:.5em;width:16px;height:4px;background:var(--red)}
@@ -72,7 +72,7 @@
   .tbl{width:100%;border-collapse:collapse;font-size:22px}
   .tbl th,.tbl td{border-top:1px solid var(--ink);padding:8px 14px;text-align:left;vertical-align:top}
   .tbl th{background:var(--yellow);font-weight:700}
-  .tbl td:first-child{font-weight:600}
+  .tbl td:first-child{font-weight:500}
   @media (max-width:640px){.tbl thead{display:none}.tbl tr{display:block;border-top:2px solid var(--ink);padding:6px 0}.tbl td{display:block;border:0;padding:3px 14px}.tbl td:nth-child(2)::before{content:"Da una parte: ";font-weight:600}.tbl td:nth-child(3)::before{content:"Dall’altra: ";font-weight:600}}
 
   /* perché nelle card */
@@ -138,6 +138,11 @@
   .eu{display:flex;flex-wrap:wrap;align-items:center;gap:14px 24px;margin-top:40px;padding-top:24px;border-top:1px solid var(--ink)}
   .eu img{height:52px;width:auto;display:block}
   .eu p{font-size:18px;max-width:640px;line-height:1.3}
+  .intro{font-size:22px;font-weight:400}
+  .lead em{font-weight:400}
+  /* blocchi di testo sotto i titoli: stessa dimensione */
+  .intro,.lead,.why,.why p,.txt,.tone,.points,.points li{font-size:26px;font-weight:400;line-height:1.35}
+  .prop p.t{font-size:22px;line-height:1.25;margin-top:8px}
 </style>
 </head>
 <body>
@@ -167,11 +172,11 @@
   </div>
 
   <ul class="points">
-    <li>Il tema più discusso online è stato il <strong>divario digitale</strong>: 28 commenti su 77 analizzati.</li>
-    <li>La preoccupazione più ricorrente ai tavoli è l’<strong>esclusione</strong> di persone anziane, con disabilità o con meno competenze digitali, emersa in 3 tavoli.</li>
-    <li>La richiesta più condivisa è che la partecipazione abbia <strong>effetti concreti</strong> e che si sappia che fine fanno i contributi.</li>
-    <li>I <strong>data center</strong> hanno reso visibile il lato materiale dell’IA: energia, acqua, suolo e a cosa servono i dati conservati.</li>
-    <li>Le opinioni non erano tutte uguali: c’è chi vede nell’IA un’<strong>opportunità</strong> e chi non la vuole in nessun caso.</li>
+    <li>Il tema più discusso online è stato il divario digitale: 28 commenti su 77 analizzati.</li>
+    <li>La preoccupazione più ricorrente ai tavoli è l’esclusione di persone anziane, con disabilità o con meno competenze digitali, emersa in 3 tavoli.</li>
+    <li>La richiesta più condivisa è che la partecipazione abbia effetti concreti e che si sappia che fine fanno i contributi.</li>
+    <li>I data center hanno reso visibile il lato materiale dell’IA: energia, acqua, suolo e a cosa servono i dati conservati.</li>
+    <li>Le opinioni non erano tutte uguali: c’è chi vede nell’IA un’opportunità e chi non la vuole in nessun caso.</li>
   </ul>
 
   <div class="sec"><h2>Come si è svolto</h2></div>
@@ -183,7 +188,7 @@
   </ol>
 
   <div class="sec"><h2>Online</h2></div>
-  <p class="tone"><strong>Il tono è stato cauto più che entusiasta:</strong> 24 commenti positivi, 25 neutri, 14 negativi e 14 non classificati, nessuno offensivo. I ragionamenti più usati sono stati quelli pratici (50 commenti) ed etici (45).</p>
+  <p class="tone">Il tono è stato cauto più che entusiasta: 24 commenti positivi, 25 neutri, 14 negativi e 14 non classificati, nessuno offensivo. I ragionamenti più usati sono stati quelli pratici (50 commenti) ed etici (45).</p>
   <div class="themes">
     <div class="theme"><h3>Abbassare le barriere</h3><ul><li>La tecnologia deve abilitare, non diventare un ostacolo all’accesso.</li><li>Proposte soluzioni ibride tra digitale e analogico.</li></ul></div>
     <div class="theme"><h3>Formazione per tutte le età</h3><ul><li>11 messaggi parlano di alfabetizzazione e competenze digitali, dall’infanzia alla terza età.</li><li>Bisogna imparare anche quando <em>non</em> usare l’IA.</li></ul></div>
@@ -238,16 +243,16 @@
   <p class="note2">Posizioni di minoranza: una persona ha detto che l’IA non dovrebbe essere usata in nessun caso; un’altra preferisce il contatto diretto con chi amministra, come gli orari di ricevimento, a qualsiasi piattaforma.</p>
 
   <div class="sec"><h2>Le sei proposte</h2></div>
-  <p class="txt">Le proposte mettono insieme ciò che è emerso da più fonti. Sono una base da discutere, non decisioni già prese: <strong>dicci cosa ne pensi su Deliberate</strong>.</p>
+  <p class="txt">Le proposte mettono insieme ciò che è emerso da più fonti. Sono una base da discutere, non decisioni già prese: dicci cosa ne pensi su Deliberate.</p>
   <div style="height:18px"></div>
   <div class="grid" id="props"></div>
 
   <div class="sec"><h2>Da tenere a mente</h2></div>
   <ul class="points">
-    <li><strong>Non è un campione rappresentativo:</strong> i risultati raccontano cosa hanno detto le persone presenti quella sera, non cosa pensa tutta Milano.</li>
-    <li><strong>Parte dell’analisi è automatica:</strong> temi e sentiment sono stati calcolati dall’IA di Deliberate; le sintesi dei tavoli sono generate dall’IA e riviste da una persona dell’organizzazione.</li>
-    <li><strong>“Citato in N tavoli” non misura il consenso:</strong> dice solo in quanti tavoli è emerso un tema.</li>
-    <li><strong>Le registrazioni coprono 5 tavoli</strong> e alcune trascrizioni sono frammentarie: i canvas cartacei completano il quadro.</li>
+    <li>Non è un campione rappresentativo: i risultati raccontano cosa hanno detto le persone presenti quella sera, non cosa pensa tutta Milano.</li>
+    <li>Parte dell’analisi è automatica: temi e sentiment sono stati calcolati dall’IA di Deliberate; le sintesi dei tavoli sono generate dall’IA e riviste da una persona dell’organizzazione.</li>
+    <li>“Citato in N tavoli” non misura il consenso: dice solo in quanti tavoli è emerso un tema.</li>
+    <li>Le registrazioni coprono 5 tavoli e alcune trascrizioni sono frammentarie: i canvas cartacei completano il quadro.</li>
   </ul>
 
   <div class="sec"><h2>Prossimi passi</h2></div>
@@ -273,7 +278,7 @@
     </div>
     <div class="eu">
       <img src="logo-eu.png" alt="Finanziato dall’Unione Europea">
-      <p>Finanziato dall’Unione Europea nell’ambito dei contratti 101137711 (NEUROCLIMA) e 101094765 (ORBIS).</p>
+      <p>La partecipazione del Dipartimento di Design del Politecnico di Milano, di NEUROCLIMA e di ORBIS è finanziata dall’Unione Europea nell’ambito dei contratti 101137711 (NEUROCLIMA) e 101094765 (ORBIS).</p>
     </div>
   </footer>
 </div>
@@ -306,20 +311,23 @@
       why: "La mobilità è uno dei cinque temi individuati online e ha avuto un tavolo dedicato. Il gemello digitale è stato discusso in 8 messaggi, con l’esempio di Bologna e il timore che escluda parti della popolazione.",
       url: "https://deliberate.gr/topics/XXX" },
   ];
-  const COSA = ['Ogni servizio o percorso partecipativo digitale del Comune sia affiancato da sportelli, facilitatori e la possibilità di partecipare di persona. Testi in linguaggio semplice e formati accessibili, come fa Monaco di Baviera. Piattaforme progettate insieme a chi vive la città, partendo da chi oggi resta fuori.',
-    'Per ogni percorso partecipativo il Comune renda pubblici la domanda posta, i contributi ricevuti, come sono stati sintetizzati, cosa è stato deciso e perché. Anche quando una proposta non viene accolta.',
-    'Quando il Comune usa un sistema automatico deve dirlo chiaramente, spiegare cosa fa, indicare chi resta responsabile e offrire un modo semplice per chiedere spiegazioni o una revisione umana. Strumenti di partecipazione preferibilmente open source, con dati e regole pubbliche, e una commissione di persone esperte e cittadine e cittadini per le linee guida.',
-    'Percorsi gratuiti e continuativi per tutte le età, con scuole, biblioteche, associazioni e presìdi di quartiere. Una pagina del Comune con video brevi e webinar su come funziona l’IA, le regole e quando non usarla. Facilitatori e facilitatrici come ponte tra persone e strumenti.',
-    'Un registro pubblico dei data center presenti e previsti, con consumi di energia e acqua, uso del suolo, finalità dei dati, impatti e benefici per i quartieri. Valutazioni di impatto locale e confronto con chi abita la zona prima di autorizzare nuove strutture.',
-    'Usare dati e IA per adattare i trasporti, ridurre incidenti e inquinamento e rendere le tariffe più eque, con percorsi accessibili. Un eventuale gemello digitale sia pubblico e aperto. Prima e durante ogni progetto, valutare chi ne beneficia, chi ne paga i costi e chi rischia di restare indietro.'];
+  const COSA = [
+      "Il Comune di Milano dovrebbe affiancare ogni servizio o percorso partecipativo digitale con sportelli, facilitatori e possibilità di partecipare di persona. Dovrebbe inoltre usare testi in linguaggio semplice e formati accessibili, progettando le piattaforme insieme alle cittadine e ai cittadini, a partire da chi oggi incontra più ostacoli. L’obiettivo è permettere a tutte e tutti di partecipare, indipendentemente da età, disabilità, competenze digitali o accesso alla rete.",
+      "Per ogni percorso partecipativo a Milano, il Comune dovrebbe pubblicare la domanda iniziale, i contributi ricevuti, il modo in cui sono stati sintetizzati e le decisioni prese. Dovrebbe spiegare anche perché alcune proposte non sono state accolte. In questo modo, chi partecipa può capire quale seguito hanno avuto i propri contributi.",
+      "Quando il Comune di Milano usa un sistema automatizzato, dovrebbe comunicarlo chiaramente, spiegare che cosa fa e indicare chi ne è responsabile. Le persone dovrebbero poter chiedere spiegazioni o una revisione da parte di una persona. Per gli strumenti di partecipazione si propone di privilegiare soluzioni open source e rendere pubblici dati e criteri di funzionamento, tutelando le informazioni personali. Si propone inoltre una commissione, composta da esperti di diverse discipline e cittadini, per definire linee guida sull’uso dell’IA a Milano.",
+      "Il Comune di Milano dovrebbe offrire percorsi gratuiti e continuativi per tutte le età, in collaborazione con scuole, biblioteche, associazioni e presìdi di quartiere. Si propone anche una pagina online con video brevi e webinar per spiegare come funziona l’IA, quali regole la riguardano e in quali situazioni è meglio non usarla. Facilitatori e facilitatrici potrebbero aiutare le persone a orientarsi tra servizi e strumenti digitali.",
+      "Si propone che Milano pubblichi un registro dei data center esistenti e previsti, con informazioni sui consumi di energia e acqua, sull’uso del suolo, sulle finalità dei dati conservati e sugli impatti e benefici per i quartieri. Prima di autorizzare nuove strutture, le istituzioni competenti dovrebbero valutarne gli effetti sul territorio e confrontarsi con i residenti. Le opinioni emerse su questo tema sono diverse: quali informazioni e criteri dovrebbero guidare le decisioni a Milano?",
+      "Milano potrebbe usare dati e IA per migliorare i trasporti, ridurre incidenti e inquinamento, rendere le tariffe più eque e garantire percorsi accessibili. Se la città sviluppasse un gemello digitale, questo dovrebbe essere accessibile e comprensibile anche ai cittadini. Prima e durante ogni progetto andrebbero valutati benefici, costi ed effetti sui diversi quartieri e gruppi sociali. Il tema della mobilità è emerso soprattutto nei contributi online e meno nelle registrazioni dei tavoli."
+  ];
   const box = document.getElementById("props");
   TOPICS.forEach((t, i) => {
     const c = document.createElement("div");
     c.className = "prop";
     c.innerHTML = `<span class="num">${String.fromCharCode(65 + i)}</span>
-      <div class="body"><h3></h3><h4>Cosa chiediamo</h4><p class="c"></p><h4>Perché</h4><p class="w"></p></div>
+      <div class="body"><h3></h3><p class="t"></p><h4>In dettaglio</h4><p class="c"></p><h4>Perché</h4><p class="w"></p></div>
       <a class="go" target="_blank" rel="noopener">Discutila su Deliberate →</a>`;
     c.querySelector("h3").textContent = t.title;
+    c.querySelector(".t").textContent = t.text;
     c.querySelector(".c").textContent = COSA[i];
     c.querySelector(".w").textContent = t.why;
     c.querySelector(".go").href = t.url;
