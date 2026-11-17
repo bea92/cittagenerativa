@@ -143,15 +143,31 @@
   /* blocchi di testo sotto i titoli: stessa dimensione */
   .intro,.lead,.why,.why p,.txt,.tone,.points,.points li{font-size:26px;font-weight:400;line-height:1.35}
   .prop p.t{font-size:22px;line-height:1.25;margin-top:8px}
+  .nav{position:sticky;top:0;z-index:50;background:var(--blue);color:#fff;border-bottom:2px solid var(--ink)}
+  .nav-in{max-width:1080px;margin:0 auto;padding:12px 22px;display:flex;align-items:center;justify-content:space-between;gap:12px 28px;flex-wrap:wrap}
+  .nav a{color:#fff;text-decoration:none}
+  .nav .brand{font-family:"Anton",Impact,sans-serif;text-transform:uppercase;font-size:26px;line-height:1;letter-spacing:.01em}
+  .nav .links{display:flex;gap:6px 22px;flex-wrap:wrap;font-size:20px;font-weight:600;text-transform:uppercase}
+  .nav .links a{padding:2px 0;border-bottom:2px solid transparent}
+  .nav .links a:hover,.nav .links a[aria-current="page"]{border-bottom-color:var(--yellow)}
+  .nav .links a.ext{background:var(--yellow);color:var(--ink);border:2px solid var(--ink);border-radius:999px;padding:0 12px}
+  .nav .links a.ext:hover{background:#fff}
+  html{scroll-behavior:smooth;scroll-padding-top:80px}
+  @media (max-width:640px){.nav .brand{font-size:22px}.nav .links{font-size:17px;gap:4px 14px}}
+  .contact{display:flex;flex-wrap:wrap;align-items:center;gap:14px 28px}
+  .contact p{font-size:26px;line-height:1.35}
+  .contact .mail{display:inline-block;background:var(--blue);color:#fff;text-decoration:none;font-weight:700;font-size:24px;border:2px solid var(--ink);border-radius:999px;padding:8px 26px;transition:transform .15s,box-shadow .15s}
+  .contact .mail:hover{transform:translate(-3px,-3px);box-shadow:5px 5px 0 var(--ink)}
 </style>
 </head>
 <body>
+<nav class="nav">
+  <div class="nav-in">
+    <a class="brand" href="index.html">La Città Generativa</a>
+  </div>
+</nav>
 <div class="wrap">
 
-  <div class="top" style="justify-content:space-between">
-    <a class="back" href="index.html">← Torna alle proposte</a>
-    <div class="year">2026</div>
-  </div>
 
   <header class="hero">
     <div class="meta"><span class="pill">RESTITUZIONE · 1 OTTOBRE 2026</span></div>
@@ -261,6 +277,13 @@
   <div class="all" style="margin-top:32px">
     <a href="index.html">← Torna alle proposte</a>
     <a class="report" href="report.pdf" download>Scarica il report completo (PDF) ↓</a>
+  </div>
+
+  <div class="sec" id="contatti"><h2>Contatti</h2></div>
+  <div class="contact">
+    <p>Hai domande, segnalazioni o correzioni sul report? Scrivici.</p>
+    <!-- ✏️ MODIFICA QUI l'indirizzo email -->
+    <a class="mail" href="mailto:civic-ai@eumans.eu?subject=La%20Citt%C3%A0%20Generativa">civic-ai@eumans.eu</a>
   </div>
 
   <footer>

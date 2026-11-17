@@ -120,14 +120,31 @@
   .lead em{font-weight:400}
   /* blocchi di testo sotto i titoli: stessa dimensione */
   .intro,.lead,.why,.why p,.txt,.tone,.points,.points li{font-size:26px;font-weight:400;line-height:1.35}
+  .nav{position:sticky;top:0;z-index:50;background:var(--blue);color:#fff;border-bottom:2px solid var(--ink)}
+  .nav-in{max-width:1080px;margin:0 auto;padding:12px 22px;display:flex;align-items:center;justify-content:space-between;gap:12px 28px;flex-wrap:wrap}
+  .nav a{color:#fff;text-decoration:none}
+  .nav .brand{font-family:"Anton",Impact,sans-serif;text-transform:uppercase;font-size:26px;line-height:1;letter-spacing:.01em}
+  .nav .links{display:flex;gap:6px 22px;flex-wrap:wrap;font-size:20px;font-weight:600;text-transform:uppercase}
+  .nav .links a{padding:2px 0;border-bottom:2px solid transparent}
+  .nav .links a:hover,.nav .links a[aria-current="page"]{border-bottom-color:var(--yellow)}
+  .nav .links a.ext{background:var(--yellow);color:var(--ink);border:2px solid var(--ink);border-radius:999px;padding:0 12px}
+  .nav .links a.ext:hover{background:#fff}
+  html{scroll-behavior:smooth;scroll-padding-top:80px}
+  @media (max-width:640px){.nav .brand{font-size:22px}.nav .links{font-size:17px;gap:4px 14px}}
+  .contact{display:flex;flex-wrap:wrap;align-items:center;gap:14px 28px}
+  .contact p{font-size:26px;line-height:1.35}
+  .contact .mail{display:inline-block;background:var(--blue);color:#fff;text-decoration:none;font-weight:700;font-size:24px;border:2px solid var(--ink);border-radius:999px;padding:8px 26px;transition:transform .15s,box-shadow .15s}
+  .contact .mail:hover{transform:translate(-3px,-3px);box-shadow:5px 5px 0 var(--ink)}
 </style>
 </head>
 <body>
+<nav class="nav">
+  <div class="nav-in">
+    <a class="brand" href="index.html">La Città Generativa</a>
+  </div>
+</nav>
 <div class="wrap">
 
-  <div class="top">
-    <div class="year">2026</div>
-  </div>
 
   <header class="hero">
     <div class="meta">
@@ -152,12 +169,12 @@
     <p>Hai poco tempo? Su ogni proposta puoi anche solo dire se sei d’accordo o in disaccordo, senza registrarti. Lasciare un commento però ci aiuta di più: ci permette di riportare la tua opinione in modo più approfondito.</p>
   </div>
 
-  <div class="sec"><h2>Le sei proposte</h2></div>
+  <div class="sec" id="proposte"><h2>Le sei proposte</h2></div>
 
   <div class="grid" id="topics"></div>
   <div class="all"><a href="https://deliberate.gr/orgs/54" target="_blank" rel="noopener">Vedi le proposte su Deliberate →</a></div>
 
-  <div class="sec"><h2>Come partecipare</h2></div>
+  <div class="sec" id="partecipa"><h2>Come partecipare</h2></div>
   <p class="note">Hai già creato un account durante l’evento del 1° ottobre? Non serve registrarsi di nuovo: accedi con il tuo account e partecipa.</p>
   <p class="note alt">Non vuoi registrarti? Apri una proposta e clicca su d’accordo / in disaccordo (<em>Agree / Disagree</em>). Per lasciare un commento, invece, serve un account: segui i passaggi qui sotto.</p>
   <div class="steps">
@@ -166,6 +183,13 @@
     <div class="step"><b>3</b><br>Crea un account: collega Google (più veloce) o usa username e password.
       <small>Da desktop: attendi l’email con il codice di attivazione (controlla lo spam, o clicca “resend code”).</small></div>
     <div class="step"><b>4</b><br>Apri e commenta: interagisci con la discussione in tempo reale.</div>
+  </div>
+
+  <div class="sec" id="contatti"><h2>Contatti</h2></div>
+  <div class="contact">
+    <p>Hai domande, segnalazioni o correzioni sul report? Scrivici.</p>
+    <!-- ✏️ MODIFICA QUI l'indirizzo email -->
+    <a class="mail" href="mailto:civic-ai@eumans.eu?subject=La%20Citt%C3%A0%20Generativa">civic-ai@eumans.eu</a>
   </div>
 
   <footer>
