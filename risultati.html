@@ -37,7 +37,6 @@
 
   /* section titles */
   .sec{display:flex;align-items:center;gap:16px;margin:56px 0 22px}
-  .sec::before{content:"";width:64px;height:4px;background:var(--red);flex:none}
   .sec h2{font-family:"Anton",Impact,sans-serif;font-weight:400;color:var(--red);text-transform:uppercase;font-size:clamp(34px,5vw,54px);line-height:1}
 
   .question{color:var(--ink);font-weight:600;font-size:clamp(24px,3.2vw,34px);line-height:1.15}
@@ -136,6 +135,9 @@
   .prop .num{align-self:flex-start;background:var(--yellow);border-right:2px solid var(--ink);border-bottom:2px solid var(--ink);border-bottom-right-radius:10px;font-weight:700;font-size:22px;padding:2px 14px}
   .note2{font-size:20px;color:#555;margin-top:8px}
   .all a.report.big{font-size:26px;padding:14px 36px}
+  .eu{display:flex;flex-wrap:wrap;align-items:center;gap:14px 24px;margin-top:40px;padding-top:24px;border-top:1px solid var(--ink)}
+  .eu img{height:52px;width:auto;display:block}
+  .eu p{font-size:18px;max-width:640px;line-height:1.3}
 </style>
 </head>
 <body>
@@ -268,6 +270,10 @@
     <div class="orgs">
       <img src="logo-humanhall.png" alt="Human Hall">
       <img src="logo-unimi.png" alt="Università degli Studi di Milano">
+    </div>
+    <div class="eu">
+      <img src="logo-eu.png" alt="Finanziato dall’Unione Europea">
+      <p>Finanziato dall’Unione Europea nell’ambito dei contratti 101137711 (NEUROCLIMA) e 101094765 (ORBIS).</p>
     </div>
   </footer>
 </div>
